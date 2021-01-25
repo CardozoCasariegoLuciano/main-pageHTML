@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Apuntes HTML</title>	
+	<link rel="stylesheet" type="text/css" href="../../estilos-SubPaginas.css">
+	<link rel="stylesheet" type="text/css" href="Estilos-HTML.css">
+</head>
+
+
+<body>	
+
+	<header class="header-sub-paginas">		
+		<div class="botonPaginaInicio">
+			<a href="../../../index.html">
+				<img src="../../../imagenes/casita.png">
+			</a>
+		</div>	
+		<h1>Mis apuntes de HTML</h1>
+	</header>
+
+	<section class="main-html">
+
+		<!-- Introduccion  Introduccion-html -->
+			
+		<section class="Introduccion-html primerColumna formatoContenidoHTML">
+			<article>
+				<h4 class="titulo">Etiquetas:</h4>
+				<p>
+					HTML se maneja con etiquetas, estas se indican con &lt..> (Mayor/Menor), cada etiqueta que abro la tengo que cerrar con &lt/..>, estas a su vez pueden tener atributos, que se indican luego del nombre de la etiqueta <br><br>
+					<span class="ejemplosHTML"><b> ejemplo:<br>&nbsp;&nbsp; &ltp&gtUn Parrafo &lt/p&gt </b></span> es una etiqueta normal (etiqueta p)<br><br>
+	
+					<span class="ejemplosHTML"><b> ejemplo:<br>&nbsp;&nbsp; &lt a hfer="##"&gt Un Link &lt/a&gt </b></span> es una etiqueta con el atributo href="" (etiqueta a)
+					<br><br>
+				</p>
+					<!--  Se que es un choclaso horrible, pero es la estructura con el DOCTYPE y todo eso  --> 
+				<h4>Estructura principal:</h4>
+				<p>
+					&lt!DOCTYPE html> <br>
+					&nbsp &nbsp &lthtml><br>
+					&nbsp &nbsp &nbsp &nbsp &lthead><br><br>	
+					&nbsp &nbsp &nbsp &nbsp &lt/head> <br>
+					&nbsp &nbsp &nbsp &nbsp &ltbody><br><br>
+					&nbsp &nbsp &nbsp &nbsp &lt/body> <br>
+					&nbsp &nbsp&lt/html> <br> 	
+
+				</p>
+				<span class="etiquetas">	&lt!DOCTYPE html></span> Indica que el archivo es un HTML <br>
+				<span class="etiquetas">	&lthtml></span> Todo el contenido de la pagina va a estar entre las etiquetas &lthtml><br>
+				<span class="etiquetas">	&lthead></span>Dentro de la etiqueta &lthead> va el contenido que el usuario no ve, pero que afectan a la pagina<br>
+				<span class="etiquetas">	&ltbody></span> Dentro del &ltbody> va toda la informacion que el usuario ve en de la pagina web<br>
+				<p>
+
+				</p>
+				<!-- Fin del choclaso horrible --> 
+			</article>
+		</section>
+
+
+		
+
+
+		<!-- Seccion codigo de caracteres-->
+
+		<section class="codCaracteres segundaColumna formatoContenidoHTML">
+			<article>
+				<h4 class="titulo">Codigo de caracteres, comentarios y otros</h4>
+				<p>
+					Algunos caracteres no se pueden visualiuzar asi nomas, estos son los codigos de algunos caracteres:<br>
+					<table>
+						<tr>
+							<td> < </td>
+							<td> -------- </td>
+							<td> &amplt; </td>
+						</tr>
+							
+						<tr>
+							<td> > </td>
+							<td> -------- </td>
+							<td>&ampgt;</td>									
+						</tr>
+						<tr>
+							<td> " </td>
+							<td> -------- </td>
+							<td>&ampquot;</td>									
+						</tr>
+						<tr>
+							<td> Espacio </td>
+							<td> -------- </td>
+							<td>&ampnbsp;</td>
+						</tr>
+						<tr>
+							<td> & </td>
+							<td> -------- </td>
+							<td>&ampamp;</td>									
+						</tr>
+						<tr>
+							<td> Acento </td>
+							<td> -------- </td>
+							<td> &ampacute + La letra (ej) &ampacutei = í </td>									
+						</tr>								
+					</table>		
+				</p>
+				<p>
+					<span class="etiquetas">&lt!--  ...  -->  </span>   Asi se escriben los comentarios
+				</p>
+				<p>
+					<span class="etiquetas">&lt;br></span>  hace un salto de linea	<br>	
+
+					<span class="etiquetas">&lt;hr/></span> crea una linea separadora<br>
+				</p>
+			</article>					
+		</section>
+
+
+		<!-- Seccion Atributos selectores-->
+
+		<section class="selectores tercerColumna formatoContenidoHTML">
+			<article>
+				<h4 class="titulo">Atributos Selectores:</h4>
+				<p>  
+					Estos atributos se pueden aplicar a cualquier etiqueta <br>
+					y su funcion es poder identificarlas usando CSS <br> <br>
+
+					<span class="atributo"> id="" </span> En CSS se marcan con un # (Ver los apuntes de CSS)<br>
+					<span class="atributo"> class="" </span> En CSS se marcan con un . (Ver los apuntes de CSS)
+				</p>
+			</article>
+		</section>
+
+
+		<!-- Seccion Etiquetas para el head-->
+
+		<section class="EtiquetasHead tercerColumna formatoContenidoHTML">
+			<article>
+				<h4 class="titulo">Etiquetas para el Head</h4>
+
+				<p>
+					<span class="etiquetas">&lttitle> ... &lt/title> </span> Aqui ira el titulo que aparece en las pestañas del buscador
+				</p>
+
+				<p>
+					<span class="etiquetas">&ltmeta> </span> las etiquetas meta no se cierran, toda la info la tiene en sus atributos e indican el funcionamiento de la pagina
+				</p>
+
+				<p>
+					<span class="etiquetas">&ltmeta charset="utf-8"></span> Permite a la pagina usar caracteres españoles (acentos, ñ, ect)
+				</p>
+						
+				<p>
+					<span class="etiquetas">&ltlink rel="stylesheet" type="text/css" href=""> </span> en href va la direccion de un archivo .css
+				</p>
+				
+				<p>
+					<span class="etiquetas">&ltlink rel="shortcut icon" type="image/x-icon" href=""> </span> en href va la direccion de la imagen para el icono de la pag (en las pestañas del buscador)
+				</p>
+			</article>
+		</section>
+
+
+		<!-- Seccion Etiquetas para el texto-->
+
+		<section class="etiquetasTextos segundaColumna formatoContenidoHTML">
+			<p>
+				<h4 class="titulo">Etiquetas para Texto:</h4>
+
+				<p><span class="etiquetas">&ltarticle> ... &lt/article> </span> es un articulo, dentro tendra parrafos, imagenes y otras cosas</p>
+
+				<p><span class="etiquetas">&ltp> ... &lt/p> </span> En las etiquetas &ltp> van los parrafos de nuestra pagina</p>
+
+				<p><span class="etiquetas">&lth#> ... &lth#> </span> Remplazar el # con un numero del 1 al 6, los &lth> son titulos </p>
+
+				<p><span class="etiquetas">&ltb> ... &lt/b> </span>  el contenido lo pone en NEGRITA</p>
+
+				<p> <span class="etiquetas">&lti> ... &lt/i> </span>El contenido lo pone en Italica (inclinada) </p>
+
+				<p><span class="etiquetas">&ltu> ... &lt/u> </span> El contenido lo pone Subrayado</p>		
+																		
+			</p>
+		</section>
+
+
+		<section class="etiquetasIncrustar primerColumna formatoContenidoHTML">
+			<p>
+				<h4 class="titulo">Etiquetas para Incrustar:</h4>
+				
+				<p>
+					<span class="etiquetas">&lt;a> ... &lt;/a></span> --- Esta etiqueta nos permite tener liks, en el medio va el texto que queremos mostrar (puede ser una imagen)	<br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<b>atributo obligatorio: [href=""] Entre las comillas la direccion de la pagina a linkear</b><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;atributos opcionales: [target: _blanck] abre el link en otra pestaña 
+					<br><br><br>
+				</p>	
+				<p>
+					<span class="etiquetas">&lt;img></span>	--- no tiene etiqueta de cierra. Incrusta una imagen. <br><br> 			
+					&nbsp;&nbsp;&nbsp;&nbsp;<b>atributo obligatorio: [src=""] Entre las comillas la direccion de la imagen</b><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;atributos opcionales: [alt="unTexto"] texto que sale cuando no se puede cargar la imagen
+					<br><br><br>
+				</p>						
+			</p>
+		</section>
+
+
+		<section class="etiquetasListas  segundaColumna formatoContenidoHTML">
+			<p>
+				<h4 class="titulo"> Listas </h4>
+				
+				<p>
+					<span class="etiquetas">&lt;ol> ... &lt;ol></span> --- Listas ordenadas
+					
+					<br><br>
+				</p>	
+				<p>
+					<span class="etiquetas">&lt;ul> ... &lt;ul></span>	--- Listas desordenadas.
+					<br><br>
+				</p>	
+				<p>
+					<span class="etiquetas">&lt;li> ... &lt;li></span>	--- Elemento de la lista (Sin importa cual sea).
+													
+					<br><br>
+				</p>	
+				<p>
+					<span class="ejemplosHTML"> <b>
+								Ejemplo) <br>		&lt;ol>  <br>  
+							&nbsp;&nbsp;&nbsp;&nbsp;	&lt;li> Elemento 1 &lt;li> <br>  
+							&nbsp;&nbsp;&nbsp;&nbsp;   	&lt;li> Elemento 2 &lt;li> <br>
+													&lt;ol> <br>
+					</b></span>	
+													
+					<br><br><br>
+				</p>
+				
+			</p>
+		</section>
+
+
+
+		<section class="etiquetasTablas tercerColumna formatoContenidoHTML">
+			<p>
+				<h4 class="titulo"> Tablas </h4>
+				
+				<p>
+					<span class="etiquetas"> &lt;table> ... &lt;/table> </span> ---Crea una tabla
+					
+					<br><br>
+				</p>	
+				<p>
+					<span class="etiquetas"> &lt;tr> ... &lt;/tr> </span>	--- crea una nueva fila 
+					<br><br>
+				</p>	
+				<p>
+					<span class="etiquetas"> &lt;td> ... &lt;/td>  </span> --- crea una nueva columna
+													
+					<br><br>
+				</p>	
+				<p>
+					<span class="ejemplosHTML"> 
+						<b>
+							Ejemplo)  Esta tabla tiene 2 fias y 3 columas<br>
+								 &lt;table> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;	&lt;tr> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;td>holis&lt;/td> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;td>holis&lt;/td> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;td>holis&lt;/td> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/tr> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;	&lt;tr> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;td>Chauchis&lt;/td> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;td>Chauchis&lt;/td> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&lt;td>Chauchis&lt;/td> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/tr> <br>
+								&lt;/table> <br>
+						</b>
+					</span>	
+													
+					<br><br><br>
+				</p>
+				
+			</p>
+		</section>
+
+
+		<section class="etiquetasFormularios primerColumna formatoContenidoHTML">
+			<p>
+				<h4 class="titulo"> Formularios </h4>
+				
+				<p>
+					<span class="etiquetas"> &lt;form action="" method=""> ... &lt;/form> </span> Estructura principal. Esos 2 atrubutos no son obligatorios para que anden, pero si para que hagan algo ultil <br><br>
+					&nbsp;&nbsp;			atributos:	<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;	<span class="atributo"> action="" </span>  <----- la pagina que se encarga de procesar los datos del formulario <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;	<span class="atributo"> method="" </span>	< ----- El metodo por el cual el formulario pasara los datos (GET o POST) <br>
+					
+					<br>
+				</p>	
+				<p>
+					Dentro de esas etiquetas uso <span class="etiquetas"> &lt;label> ... &lt;/label> </span>, Agrupan distintas funciones para el formulario
+					<br><br>
+				</p>	
+				<p>
+					Y dentro de las label voy a usar <span class="etiquetas"> &lt;input type="" name="">  </span> Que lo que hacen es crear un aspecto concreto del formulario.
+					 Dentro de <b class="atributo">type=""</b> va el tipo de dato de ese campo, en <b class="atributo">name=""</b> va el nobre que lo identifica
+													
+					<br><br>
+				</p>
+				<p>
+					<u>algunos valores para el atributo Type pueden ser: </u> <br><br>
+			
+				<span class="valor">Text</span>    ----- Texto normal<br>
+				<span class="valor">Password</span> ---- Asteristos de contraseñas <br>
+				<span class="valor">checkbox</span>	--- un cuadro marcalbe<br>
+				<span class="valor">radio</span>	--- igual que el anterior, pero si tienen el mismo valor en el atributo name="", solo podras elejir uno a la vez<br>
+				<span class="valor">button</span>	--- es un boton normal<br>
+				<span class="valor">submit</span>	--- es un boton que manda la informacion del formulario al sitio elegido en "acction"<br>
+				<span class="valor">color</span>	--- te permite elegir un color<br>
+				<span class="valor">range</span>	--- te permite elejir un rango<br><br>
+				
+				<u>Otros atributos para los Imput:</u><br><br>
+		
+				<span class="atributo">value=""</span>   ---El contenido por defento que tendra escrito ese campo<br>
+				<span class="atributo">placeholder=""</span> --- lo mismo pero en un texto de fondo<br>
+				<span class="atributo">maxlength=""</span>	--- la cantidad maxima de caracteres que permite ese campo (es un numero)<br>
+				<br><br>
+				</p>
+				<p>
+					dentro de los label tambien puedo usar:  <span class="atributo">&lt;select> ... &lt;/select></span> y dentro de estos uso <span class="atributo">&lt;option> ...&lt;/option></span> para crea una lista desplegable
+					donde cada &lt;option>&lt;/option> es un nuevo elemento
+				</p>
+				<p>
+					dentro de los label tambien puedo usar:  <span class="atributo">&lt;textarea> ... &lt;/textarea></span>: es un espacio para escribir mas amplio.
+
+				</p>		
+					
+			</p>
+		</section>
+
+		<section class="etiquetasContenedores primerColumna formatoContenidoHTML">
+			<p>
+				<h4 class="titulo"> Contenedores </h4>
+
+				<p>
+					Los contenedores no tienen un efecto visiual en la paguina, pero sirven para agrupar distintos aspectos de esta
+				</p>
+				
+				<p>
+					<span class="etiquetas"> &lt;div> ... &lt;/div> </span> --- Se usa para contenido generico
+					
+					<br><br>
+				</p>	
+				<p>
+					<span class="etiquetas"> &lt;footer> ... &lt;/footer> </span>	--- se usa para el contenido que se encuentra al pie de la pagina
+					<br><br>
+				</p>	
+				<p>
+					<span class="etiquetas"> &lt;header> ... &lt;/header> </span> --- se usa para el contenido que se encuentra al principio de la pagina
+													
+					<br><br>
+				</p>
+				<p>
+					<span class="etiquetas"> &lt;span> ... &lt;/span> </span> --- Se usa para contenido generico
+													
+					<br><br>
+				</p>
+				<p>
+					<span class="etiquetas"> &lt;section> ... &lt;/section> </span> --- aqui ira en contenido principal
+													
+					<br><br>
+				</p>	
+				<p>
+					<span class="etiquetas"> &lt;aside> ... &lt;/aside> </span> --- contenido lateral
+													
+					<br><br>
+				</p>						
+				
+			</p>
+		</section>
+				
+		<section class="CSSenHTML segundaColumna formatoContenidoHTML">
+			<article>
+				<h4 class="titulo">CSS dentro del HTML</h4>
+				<p> Lo idoneo es tener otro archivo solo para el CSS y conectarlo con una etiqueta en el Head. Pero hay formas de hacerlo dentro de nuestro archivo HTML:
+				</p>
+				<p>
+					<span class="etiquetas">&lt;style type="text/CSS"> ... &lt;/style> </span> dentro de la etiqueta <span class="etiquetas">Head</span>. <br>
+					Y dentro de las etiquetas style va todo el codigo CSS (Ver apuntes CSS)<br><br>
+				</p>
+					
+				<p>
+					<span class="atributo">style="... ; ... ;"</span> Esto de usa dentro de una etiqueta como si fuese un atributo  <br><br>
+					<span class="ejemplosHTML">
+							Ejemplo: <br> &lt;h4 style="color: black; font-size: 15px;> Hola mundo&lt;/h4>
+					</span> <br> Aqui modifico el color y el tamaño de un titulo h4 espesifico
+				</p>						
+			</article>
+		</section>	
+					
+	</section>		
+
+	<span class="BotonDeVuelta">
+			<a href="Apuntes-HTML.html">Arriva perro</a>					
+	</span>
+
+	<footer class="footer">
+		
+		<p>
+			Mis apuntes de HTML
+		</p>
+
+	</footer>
+
+</body>
+</html>

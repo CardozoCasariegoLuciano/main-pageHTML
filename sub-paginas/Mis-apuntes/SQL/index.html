@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes de SQL</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="../../estilos-SubPaginas.css">
+</head>
+<body>
+
+    <section class="contenedor">
+
+        <header class="header-sub-paginas">		
+            <div class="botonPaginaInicio">
+                <a href="../../../index.html">
+                    <img src="../../../imagenes/casita.png">
+                </a>
+            </div>	
+            <h1>Mis apuntes de SQL (structured query language)</h1>        
+        </header>  
+
+
+        <section class="main">
+
+
+            <section class="basesdedatos formatoBasico">
+                <h2>Bases de datos</h2>
+                <p><span class="comando"> CREATE DATABASE [nombreDB];</span> Para crear una base de datos</p>
+                <p><span class="comando">DROP DATABASE [nombreDB];</span> Para Eliminar una base de datos</p>
+                <p><span class="comando">SHOW DATABASES;</span> Para ver la lista de bases de datos (en consola)</p>
+                <p><span class="comando"> USE [nombreDB];</span> esto nos posiciona dentro de la base de datos en la que queremos trbajar</p>
+            </section>
+
+
+            <sectio class="creartablas formatoBasico">
+                <h2>Tablas</h2>
+                <p>
+                    <span class="comando">CREATE TABLE [nombreTabla] ([NombreDelaColumna] [TipoDeDato] [Opcionales], ...otra columna ...);</span> <br><br>
+                    
+                    Posibles opciones: <br><br>
+							NOT NULL  : No permite el campo en NULL<br>
+							AUTO_INCREMENT : Ese valor (tipo numerico, INT u otros) aumentara automaticamente <br>
+							PRIMARY KEY : clave primaria de la tabla<br>
+                </p>
+                <p><span class="comando">DROP TABLE [nombreTabla];</span> para eliminar una tabla</p>
+                <p><span class="comando"> SHOW TABLES;</span> Para ver la lista de tablas (en consola)</p>
+                <p><span class="comando"> DESCRIBE [nombreTabla];</span>para ver los detalles de una tabla</p>
+                
+            </sectio>
+
+
+            <section class="modificarTablas formatoBasico">
+
+                <h2>Modificar tablas</h2>
+
+                <p><span class="comando">ALTER TABLE [nombreTabla] DROP [NombreDelCampo];</span> para quitar un campo(columna)</p>
+                <p><span class="comando">ALTER TABLE [nombreTabla] ADD COLUMN [NombreDelCampo] [TipoDeDato] ;</span>para agregar otro campo(columna)</p>
+                <p>
+                    <span class="comando">INSERT INTO [nombreTabla] ([Campos]) VALUES ([Valores]);</span> para agregar tuplas(filas) <br><br>
+
+                    ([Campos]): Todos los campos que tenga la tabla y que yo quiera usar para agregar valores <br>
+                    ([Valores]): los datos que quiera agregar en cada campo en el orden en el que los puse en [Campos] (NO olvidar las comillas para los varchars)
+                            ambos separados por comas (,) <br>
+                </p>
+
+                <p>
+                    <span class="comando">DELETE FROM [nombreTabla] WHERE [UnCriterioParaEliminar];</span>para Eliminar tuplas(filas) <br><br>
+ 
+                    [UnCriterioParaEliminar]: igual que para los SELECT, un ejemplo puede ser:  <br><br>
+			
+                        <span class="ejemplo"> DELETE FROM personas WHERE edad=30;</span> Elimina a todas las personas que tengan 30 años
+                
+                </p>
+
+                <p>
+                    <span class="comando">UPDATE [nombreTabla] SET [NombreCampo]=[NuevoValor] WHERE [UnCriterioParaModificar];</span> <br><br>
+                
+                    [UnCriterioParaModificar]: Es opcional, si no se pone modifica a toda la tabla.  <br><br>
+                        ejemplo:
+                               
+                        <span class="ejemplo">UPDATE personas SET edad=(edad + 1) WHERE nombre = "Pepe";</span>                    
+                        Aumenta un año a la edad de todas las personas que se llamen pepe en la tabla
+
+                </p>                
+            </section>
+
+
+            <section class="importar formatoBasico">
+                <h2>Importar tablas</h2>
+                <p>Si quiero importar una tabla de un exel, este tiene que ser .ods, y lo puedo hacer desde el panel de
+                    phpMyAdmin en mi localhost parandome en la base de datos que quiera y buscando la opcion importar.
+                    Tambien puedo exportar tablas de una base de datos para importarla en otra</p>
+            </section>
+
+
+
+            <section class="consultas formatoBasico">
+                <h2>Consultas de seleccion</h2>
+                <p>
+                    <span class="comando">SELECT [Campos] FROM [nombreTabla];</span> <br><br>
+
+                    Muestra todos los valores en los campos seleccionados de la tabla elegida ( con el * asterisco, en la parte de [campos] seleccionamos todos los campos
+                </p>
+
+
+                <p>
+                    <span class="comando">SELECT [Campos] FROM [nombreTabla] WHERE [unaCondicion]; </span>
+                
+                    es igual a la anterior, pero al agregarle un WHERE, solo se van a mostrar las tuplas que cumplan la condicion que le pasamos <br>
+                    
+                    <span class="ejemplo">SELECT nombre FROM personas WHERE edad = 20;</span> <br>
+                   esto muestra todos los nombres de las personas que tengan 20 años. Edad tiene que ser un campo existente en la tabla utilizada
+                </p>                
+            </section>
+
+
+            <section class="comodines formatoBasico">
+                <h2>Comodines para caracteres</h2>
+                <p>
+                    Los comodines de caracteres son justamente eso, pueden ser cualquier caracter. <br>
+	                Para usarlos tengo que reemplazar el = (igual) por el LIKE (vendrian a ser lo mismo)
+	                y luego usar uno de los siguientes comodines dentro del string que quiero que retorne la consulta <br><br>
+
+	               <span class="comando"> % (Comodion de palabras)</span> puede reemplazar toda una palabra <br>
+                   <span class="comando"> _ (Comodin de caracter)</span>  solo puede reemplazar un caracter <br>
+
+                </p>
+                <p>
+                    Ejemplos: <br><br>
+
+                    <span class="ejemplo">SELECT * FROM productos WHERE nombre LIKE "%personas";</span> <br>
+                    Va a retornar todas las columnas de la tabla productos en las que el campo "nombre" termine  en "personas" (ya que el comodin esta al principio) <br><br>
+
+
+                    <span class="ejemplo">SELECT * FROM productos WHERE nombre LIKE "personas%"; 	</span> <br>
+                    Va a retornar todas las columnas de la tabla productos en las que el campo "nombre" comience con "personas" (ya que el comodin esta al final) <br><br>
+
+                    <span class="ejemplo"> SELECT * FROM productos WHERE nombre LIKE "per_onas"; </span> <br>
+                    Va a retornar todas las columnas de la tabla productos en las que el campo "nombre" sea igual a "per#onas" siendo # cualquier letra, por lo que podra retornar tanto "personas" como "perzonas" <br><br>
+			      </p>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+        <span class="BotonDeVuelta">
+            <a href="index.html">Subir</a>					
+        </span>
+
+
+        <footer class="footer">
+            <p>Apuntes de SQL</p>
+        </footer>
+
+
+
+    </section>
+
+    
+</body>
+</html>

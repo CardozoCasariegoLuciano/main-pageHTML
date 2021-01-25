@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apuntes de Git y GitHub</title>
+	<link rel="stylesheet" type="text/css" href="../../estilos-SubPaginas.css">
+	<link rel="stylesheet" type="text/css" href="estilos-git-github.css">
+</head>
+<body>
+
+	<header class="header-sub-paginas">		
+			<div class="botonPaginaInicio">
+				<a href="../../../index.html">
+					<img src="../../../imagenes/casita.png">
+				</a>
+			</div>	
+			<h1>Mis apuntes de Git y GitHub</h1>
+	</header>
+		
+
+	<section class="main">
+
+
+			<section class="introduccion formatoContenidoGit">
+				<article>
+					<h4>Que es git?</h4>
+					<p>
+						Git, es un software de control de versiones diseñado por Linus Torvalds. <br>
+					</p>
+					<p>
+						<b>¿Que es un controlador de versiones?</b> <br>
+						se define como control de versiones a la gestión de los diversos cambios que se realizan sobre los elementos de algún producto o una configuración del mismo. <br><br>
+
+						En pocas palabras Git no trabaja directamente con los archivos, sino con los distintos cambios que nosotros realizamos sobre estos con el paso del tiempo
+					</p>
+				</article>
+			</section>
+
+			<!-- Manejo de Git -->
+
+			<section class="manejoGit formatoContenidoGit">
+				<article>
+					<h4> Manejo de Git</h4>
+					<p> Si estamos en <b>Linux</b> tenemos que posicionarnos dentro de la carpeta en la que queremos trabajar y ahi usar la terminal</p>
+					<p> Si estamos en <b>Windows</b> Tenemos que abir la terminal "GitBash" que nos viene a la hora de instalar Git dentro de la carpeta en la que vamos a trabajar</p>
+				</article>
+			</section>
+
+			<!-- Comando INIT -->
+
+			<section class="init formatoContenidoGit">
+				<article>
+					<h4>Crear un repositorio</h4>
+					<p> <span class="comandoGit">git init</span> Con este comando creamos un repositorio en la carpeta en la que estemos parados para comenzar a trabajar con Git</p>
+
+					<h4>Configuracion de usuario</h4>
+					<p> <span class="comandoGit">git config --global user.email "tu@email.com"</span> Indica a git el mail del usuario que realizara 	los cambios 
+					</p>
+					<p> <span class="comandoGit">git config --global user.name "Tu Nombre"</span> Indica a git el nombre del usuario que realizara los 		cambios 
+					</p>
+					<p>
+						<span class="comandoGit">git config --list</span> podremos ver toda la configuraciones, por ahi tiene que estar el mail y nombre del usuario (si no estan es porque todavia no tiene nada configurado)
+					</p>
+
+				</article>
+			</section>
+
+			<!-- Comando STATUS -->
+
+			<section class="status formatoContenidoGit">
+				<article>
+					<h4>Estado de nuestro repositorio</h4>
+					<p><span class="comandoGit">git status</span> Con este comando podemos ver el estado de nuestro repositorio, desde la rama en la que estamos parados hasta los archivos sin stagear o commitear</p>
+				</article>
+			</section>
+
+			<!-- STAGING -->
+
+			<section class="add formatoContenidoGit">
+				<article>
+					<h4>Staging</h4>
+					<p>
+						El Stagin es un area en memoria Ram, donde vas a guardar todos los cambios antes de enviarlos al repositorio <br> 
+
+						<span class="comandoGit">git add .</span> Agrega al stagin todos los archivos<br>
+
+						<span class="comandoGit">git add [unArchivo]</span>  Agrega al stagin el archivo espesifico <br>
+					</p>				
+					<p>
+						Para remover un elemento del area de Stagin puedo usar el comando <br>
+
+						<span class="comandoGit">git reset HEAD</span><br>
+
+
+					</p>					
+				</article>
+			</section>
+
+			<!-- Mandar al repositorio (Commit)  -->
+
+
+			<section class="commit formatoContenidoGit">
+				<article>
+					<h4>Commit</h4>		
+					<p>
+						Una vez tengo mis nuevos cambios en el area de staging, los tengo que mandar al repositorio: <br>
+						<span class="comandoGit">git commit -m "unMensaje"</span> el atributo <b><i>-m " "</i></b> es obligatorio, en el mensaje tengo que describir los cambios realizados en pocas palabras <br>
+					</p>
+					<p>						
+						<span class="comandoGit">git commit -am "unMensaje"</span> agregando como atribulo <b><i>-a</i></b> nos ahorramos tener que hacer un git add a ese cambio, pero solo para aquillos archivos que ya fueron agregados al stagin alguna vez en su historia
+						<br>
+					</p>
+					<p>					  
+						<span class="comandoGit">git commit --amend -m "unMensaje"</span> lo que hace el <b><i>--amend</i></b> es "fucionar" ese comit con el anterior.
+						Util cuando olvidas incluir algo en ese commit anterior 
+					</p>
+
+				</article>
+			</section>
+
+
+			<!-- Desacer un cambio guardado -->
+
+			<section class="restore formatoContenidoGit">
+				<article>
+					<h4>Deshacer un cambio</h4>
+					<p>
+						<span class="comandoGit">git restore [nombre-del-archivo]</span> vulve a la ultima vercion del archivo y lo quita incluso de la lista "no stage"
+						(deshace todos los cambios sobre el archivo desde el ultimo commit)
+					</p>
+
+				</article>
+			</section>
+
+
+			<!-- Quitar un elemento del repositorio -->
+
+			<section class="rmForce formatoContenidoGit">
+				<article>
+					<h4>Eliminar del repositorio</h4>
+					<p>
+						<span class="comandoGit">git rm --force [nombre-del-archivo]</span> elimina el archivo del repositorio
+					</p>
+
+				</article>
+			</section>
+
+
+			<!-- Ver la historia de un archivo -->
+
+			<section class="log formatoContenidoGit">
+				<article>
+					<h4>Ver la historia de un archivo</h4>
+					<p>
+						<span class="comandoGit">git log [nombre-del-archivo]</span> Muestra todos los commit que afectaron al archivo seleccionado, junto al texto seleccionado y su codigo de identificacion
+					</p>
+					<p>
+						<span class="comandoGit">git log (sin nada)</span> muestra todos los cambios del repositorio
+					</p>
+					<p>
+						<span class="comandoGit">git log [sin o con archivo] --stat</span> te muestra ademas de la historia, cuantos cambios se hicieron
+					</p>
+					<p>
+						<span class="comandoGit">git log --all</span> te muestra TODA la historia
+					</p>
+					<p>
+						<span class="comandoGit">git log --all --graph</span> te muestra una especie de grafico (puede  ir sin el --all) sobre las ramas
+					</p>
+					<p>
+						<span class="comandoGit">git log --all --graph --decorate --oneline</span> muestra lo mismo que el anterior, pero mas comprimido y facil de leer
+					</p>
+
+					<p>
+						<span class="comandoGit">git reflog</span> muestra lo mismo que log, pero absolutamente todo, incluso las cosas que fueron eliminadas. Es especialmente util cuando tenemos que recuperar una vercion ya eliminada
+					</p>
+
+				</article>
+			</section>
+
+
+			<!-- Ver los cambios de un archivo con su vercion anterior -->
+
+			<section class="show formatoContenidoGit">
+				<article>
+					<h4>Diferencia del ultimo commit</h4>
+					<p>
+						<span class="comandoGit">git show</span> Muestra las diferencias del ultimo commit con su vercion anterior
+					</p>	
+					<p>
+						<span class="comandoGit">git show [CodigoDeUnCommit]</span> Muestra las diferencias de ese commit con su vercion anterior (el cogido puedo sacar con un log)
+					</p>		
+				</article>
+			</section>
+
+
+			<!-- Ver las diferencias entre dos verciones -->
+
+			<section class="diff formatoContenidoGit">
+				<article>
+					<h4>Diferencias entre verciones</h4>
+					<p>
+						<span class="comandoGit">git diff</span> Muestra las diferencias de mi trabajo actual con la ultima vercion que tenga en el repositorio
+					</p>
+					<p>
+						<span class="comandoGit">git diff --staged</span> Muestra las diferencias de lo que tenga en el staging area (add) con la ultima vercion que tenga en el repositorio</p>	
+					<p>
+						<span class="comandoGit">git diff [CodigoDeUnCommit] [OtroCodigoDeUnCommit]</span> Muestra las diferencias entre dos verciones distintas (el cogido puedo sacar con un log)
+					</p>		
+				</article>
+			</section>
+
+
+			<!-- Volver a una vercion anterior -->
+
+			<section class="reset formatoContenidoGit">
+				<article>
+					<h4>Volver a una vercion anterior</h4>
+					<p>
+						<span class="comandoGit">git reset [IdentificadorDeLaVercionQueQueremos] --hard</span> "Vuelve en el tiempo" y borra las verciones posteriores a esa que elegimos (NO se usa a la ligera, vas a perder todo el travajo de las verciones borradas)
+					</p>
+					<p>
+						<span class="comandoGit">git reset [IdentificadorDeLaVercionQueQueremos] --soft</span> "Vuelve en el tiempo" pero lo que este en el staging sigue ahi (No es  muy usado)
+					</p>	
+						
+				</article>
+			</section>
+
+
+			<!-- Ver como era una vercion antigua de un archivo -->
+
+			<section class="checkout formatoContenidoGit">
+				<article>
+					<h4>Ir a otra vercion</h4>
+					<p>
+						<span class="comandoGit">git checkout [IdentificadorDeLaVercionQueQueremos] </span> Nos muestra como era todo nuestro repositorio al momento de esa vercion. Util para ver como eran las cosas en otras verciones. <br><br>
+					</p>
+
+					<p>
+						<span class="comandoGit">git checkout [IdentificadorDeLaVercionQueQueremos] [unArchivo]</span> Solo nos muestra como era nuestro archivo elegido al momento de esa vercion.
+						
+					</p>
+
+					<p>
+						<span class="comandoGit">git checkout master</span> Vuelve a la ultima vercion del repocitorio
+					</p>	
+
+					<p>
+						<span class="comandoGit">git checkout -b [unNombre] </span> ya estando dentro de una vercion antigua, este comando nos crea una rama nueva (ver al lado) a partir de esa vercion
+					</p>
+						
+				</article>
+			</section>
+
+			<!-- Ramas -->
+
+			<section class="ramas formatoContenidoGit">
+				<article>
+					<h4>Ramas/Branches</h4>
+					<p>
+						Se trata de una bifurcación del estado del código que crea un nuevo camino de cara a la evolución del código, en paralelo a otras ramas que se puedan generar. 
+					</p>
+
+					<p>
+						<span class="comandoGit">git branch [ElNombreDeLaRama]</span>  Para crear una rama nueva
+					</p>	
+
+					<p>
+						<span class="comandoGit">git checkout [ElNombreDeLaRama]</span> Para moverme a otra rama (para volver al master es: git checkout master)
+					</p>
+
+					<p>
+						<span class="comandoGit">git branch</span>   Para ver todas las ramas
+					</p>
+
+					<p>
+						<span class="comandoGit">git branch -D [NombreDeLaRama]</span>  Pare eliminar una rama
+					</p>
+						
+				</article>
+			</section>
+
+
+
+			<!-- Merge -->
+
+			<section class="merge formatoContenidoGit">
+				<article>
+					<h4>Merge: Unir dos ramas</h4>
+					<p>
+						un Merge es unir dos ramas. los cambios van a terminar en la rama en la que este parado a la hora de hacer un merge.
+					</p>
+
+					<p>
+						<span class="comandoGit">git merge [ElnombreDeLaRamaQueQuieroMergear] -m "unComentario"</span>  Realiza el merge con la rama elegida
+					</p>	
+
+					<p>
+						 En caso de conflicto (que dos ramas modifiquen las mismas partes del archivo) lo tengo que solucionar a mano, elijiendo la vercion de la rama 
+      					  que yo quiera y luego hago el Commit para guardar los cambios
+					</p>
+
+					<p>
+						<span class="comandoGit">git merge --abort</span>  Para abortar la fucion
+					</p>
+
+					
+				</article>
+			</section>
+
+
+
+			<!-- Repositorios remotos -->
+
+			<section class="remoto formatoContenidoGitEspecial">
+				<article>
+					<h4>Repositorios remotos</h4>
+					<p>
+						Que es un repositorio remoto? <br> Los repositorios remotos son versiones de tu proyecto que están hospedadas en Internet o en cualquier otra red
+					</p>
+
+					<p>
+						<span class="comandoGit">git clone [URL del repositorio en remoto]</span>  Simplemente baja a la computadora el repositorio mio o de otra persona.
+					</p>			
+
+					<p>
+						<span class="comandoGit">git remote add [origin] [URL de mi repositorio en remoto]</span>  Relaciona nuestro repositorio local con el remoto (de GitHub u otros).<br> Lo mas comun y estandar es usar el nombre [origin] para referirce al repocitorio remoto, pero puede ser cualquier nombre
+					</p>
+
+					<p>
+						<span class="comandoGit">git remote set-url [origin] [nuevo URL]</span>  Cambia el repositorio remoto en el que esta asociado mi repositorio local
+					</p>
+
+					<p>
+						<span class="comandoGit">git remote -v</span> Nos muestra si tenemos un repocitorio remoto asociado, y si es asi nos muestra cual es para bajar (fetch) o subir (push) cambios. Generalmente es igual en ambos casos
+					</p>
+
+					<br>
+					
+					<p>
+						<span class="comandoGit">git pull [origin] master</span>  Para descargar cosas del repositorio remoto(Y actualizar con los nuevos cambios)
+					</p>
+
+					<p>
+						<span class="comandoGit">git push [origin] master</span> Para Subir cosas al repositorio remoto
+					</p>
+
+					<p>
+						IMPORTANTE!! este es un caso muy puntual:
+							supongamos que los archivos que estan en mi repositorio local y remoto son distintos.
+							Si lo que yo quiero es subir mis archivos del repositorio local al repositorio remoto no me va a dejar ya que las historias de esos arichos no esta relacionada, primero tengo que traer lo que este en el remoto a mi repositorio local con el comando: <br><br>
+
+							<span class="comandoGit">git pull origin master --allow-unrelated-histories</span> Comando que trae la versión del repositorio remoto y hacer merge para crear un commit con los archivos de ambas partes. <br><br>
+
+							una vez ya tenga todo lo del repositorio remoto en mi local, ya voy a poder subir y bajar cosas sin problemas<br><br>
+
+							Si desde un principio mi repositorio local esta vacio, no hace falta, solo con un gil pull alcanza
+					</p>
+
+					
+				</article>
+			</section>
+
+
+			<!-- SSH -->
+
+			<section class="SSH formatoContenidoGitEspecial">
+				<article>
+					<h4>LLaves publicas y pribadas/SHH</h4>
+					<p>
+						Las llaves SSH son una forma de proteger nuestro codigo con una capa de encriptacion, son mucho mas seguras que el HTTPS. <br>
+						Notas: <br>
+						&nbsp;&nbsp; Podemos clonar nustro repositorio con SSH en lugar de HTTPS<br>
+						&nbsp;&nbsp; No es necesario poner mi usuario y contraseña todo el tiempo<br>
+						&nbsp;&nbsp; Es una llave para cada equipo(computadora), no por pesona<br>				
+					</p>
+
+					<p>
+						Pasos a seguir para configurar una clave SHH en Linux: <br>
+						&nbsp;&nbsp; <b>Nota: las claves SSH no son propias de Git, pueden ser usadas en otras aplicasiones </b><br><br>
+
+						Paso 1) <span class="comandoGit">ssh-keygen -t rsa -b 4096 -C "tu@email.com"</span> <br>
+						&nbsp;&nbsp; Esto va a crear una clave SSH en nuestra computadora. <br>
+						&nbsp;&nbsp; nos va a preguntar donde queremos guardarla, pero la ubicacion por defecto esta bien, solo le damos enter otra vez. <br>
+						&nbsp;&nbsp; Luego nos va a preguntar por una contraseña estra para esa llave, no es nesesaria (puedo darle enter) pero esta bueno tenerla 
+						<br><br>
+
+						Paso2) <span class="comandoGit">eval $(ssh-agent -s)</span> <br>
+						&nbsp;&nbsp;Enciende el "servidor" de llaves SSH de tu computadora<br>
+						&nbsp;&nbsp; nos muestra algo como "agent pid unNumero" indicando que esta todo bien
+						<br><br>
+
+						Paso3) <span class="comandoGit">ssh-add ruta-donde-guardaste-tu-llave-privada</span> <br>
+						&nbsp;&nbsp;Añade tu llave SSH a este "servidor":<br>
+						&nbsp;&nbsp; la ruta por defecto tendria que ser: ~/.ssh/id_rsa
+						
+						<br><br>
+
+						Paso4) copiar el contenido del archivo id_rsa.pub que esta en la carpeta ~/.ssh <br>					
+						
+						<br><br>
+
+						Paso5) Ir a GitHub > settings de nuestro perfil > en la seccion "SHH and GPG keys" > clic en "new clave SSH" > 
+						 Elijo un titulo y pego el contenido del punto 4 <br>
+						 &nbsp;&nbsp; hasta aca ya tengo mi cuenta de git asociada con la clave SSH de mi PC, pero todabia no la estoy usando
+						
+						<br><br>
+
+
+						Paso6)  <span class="comandoGit">git remote set-url [origin] [miRepositorio con SHH] </span> <br>
+						&nbsp;&nbsp; en mi repositorio remoto busco y copio el codigo para clonar con SHH y lo pego en ese comando
+
+						<br><br>
+
+						Y listo, ya tengo una clave SSH en mi computadora conectada a GitHub
+					</p>					
+				</article>
+			</section>
+
+			<!-- Alias de Git -->
+
+			<section class="AliasG formatoContenidoGit">
+				<article>
+					<h4>Alias de Git</h4>
+					<p>
+						Un alias es una abreviacion de un comando (generalmente uno largo) para tener acceso de forma mas rapida. <br>
+						Los alias "normales" son propio de linux, no de git, y estos se borran al cerrar la terminal.<br>
+						Los alias de git no se borran
+					</p>
+
+					<p>
+						<span class="comandoGit">git config --global alias.ElnombreDelAlias "Nombre del comando"</span>  crea un alias
+					</p>	
+
+					<p>
+						 <span class="comandoGit">git "elnombreDelAlias"</span>  accede a ese alias
+					</p>				
+				</article>
+			</section>
+
+			<!-- Manejo de ramas -->
+
+			<section class="ManejoRamas formatoContenidoGit">
+				<article>
+					<h4>Manejo de ramas</h4>				
+					<p>
+						<span class="comandoGit">git push origin [LaRama]</span>  Para mandar una rama al repositorio remoto
+					</p>	
+					<p>
+						<span class="comandoGit">git pull origin [LaRama]</span>  Traer una rama desde el repositorio remoto
+					<p>
+						<span class="comandoGit">git push origin --delete [LaRama]</span>  Borrar ramas del repositorio remoto que ya no esten en el local
+					</p>
+					<p>
+						<span class="comandoGit">git branch</span>  Para ver las ramas locales
+					</p>
+					<p>
+						<span class="comandoGit">git branch -r</span> Para ver las ramas remotas
+					</p>
+					<p>
+						<span class="comandoGit">git branch -a</span> Para ver todas las ramas
+					</p>
+				
+				</article>
+			</section>
+
+			<!-- Git ignore -->
+
+			<section class="gitignore formatoContenidoGit">
+				<article>
+					<h4>Git ignore</h4>				
+					<p>
+						Con el git ignore nos aseguramos que git va a ignorar siertos archivos a la hora se subirlos al repositorio remoto, como por ejemplo archivos bianrios, archivos que tengan nuestras contraseñas, etc. <br>
+						Para hacerlo tenemos que crear un archivo llamado <span class="comandoGit">.gitignore</span> y dentro poner los archivos que vamos a ignorar (uno por renglon) <br><br>
+						por ejemplo: si pongo [*.jpg] git va a ignorar todos los archivos .jpg que quiera subir
+					</p>	
+					
+				
+				</article>
+			</section>
+
+			<!-- GitHub Pages -->
+
+			<section class="GitHubPages formatoContenidoGit">
+				<article>
+					<h4>GitHub Pages</h4>				
+					<p>
+						GitHub pages es un servicio de hosting gratuito que ofrece github para publicar tu pagina web Esta bueno para crear tu portafolio 
+					</p>
+
+					<p>
+						Pasos: <br>
+							1) Estando en GitHub crear un nuevo repositorio publico llamado [TuNombreDeUsuario].github.io <br>
+							2) Clonar ese repositorio vacio al home de tu PC y ahi dentro crear un index.html<br>
+							3) Modificar ese index a gusto, hacerle el git add, commit, pull y push<br>
+							4) Listo, ahora ya tengo en internet mi pagina web, para buscarca en el navegador el url es: [TuNombreDeUsuario.github.io]	<br><br>							
+							Si te tira error podes intentar con:<br>	
+							5) Estando al repocitorio en GitHub ir a "Setings" y buscar la seccion "GitHub Pages", ahi en el campo Source cambiar el "None" por 	"Master branch" una vez cargado eso te va a decir la url de tu pagina
+					</p>			
+					
+				
+				</article>
+			</section>
+
+
+
+			<!-- Git stash-->
+
+			<section class="GitStash formatoContenidoGit">
+				<article>
+					<h4>Git stash</h4>				
+					<p>
+						Es una forma útil de tener en temporal los cambios para poder moverse entre ramas y luego poder recuperar esos cambios.
+						Cuando hago un cambio por error y no quiero hacerle un comit uso el git stash
+					</p>
+
+					<p>
+						<span class="comandoGit">git stash</span> Guarda los cambios en un lugar temporal y vuelve al estado anterior
+					</p>
+					<p>
+						<span class="comandoGit">git stash list</span> Muestra la lista de todos mis stash (WIP = work in progres)
+					</p>
+					<p>
+						<span class="comandoGit">git stash pop</span> Devuelve los cambios guardados en stash (se tiene que hacer en la misma rama en la que se hizo el stash)
+					</p>
+					<p>
+						<span class="comandoGit">git stash branch [NombreDeNuevaRama]</span> Mueve ese stash a una nueva rama (el stash ya tiene que estar creado)
+					</p>
+					<p>
+						<span class="comandoGit">git stash drop</span> Borra el ultimo stash
+					</p>					
+				
+				</article>
+			</section>
+
+
+			<!-- Git grep y log -->
+
+			<section class="grepYlog formatoContenidoGit">
+				<article>
+					<h4>Busquedas</h4>				
+					<p>
+						los siguientes comandos son para ver cuantas veces y/o donde use determinada palabra, tanto en tus archivos como en commits
+					</p>
+
+					<p>
+						<span class="comandoGit">git grep [palabraAbuscar]</span>  busca la palabra en todo el repositorio y en que archivo se encuentra
+					</p>
+
+					<p>
+						<span class="comandoGit">git grep -n [palabraAbuscar]</span> ademas muestra en que linea se encuetra
+					</p>
+
+					<p>
+						<span class="comandoGit">git grep -c [palabraAbuscar]</span>  muestra cuantas veces aparece esa palabra
+					</p>
+
+					<p>
+						<span class="comandoGit">git log -S "[palabraAbuscar]"</span>  muestra todos los commits en los que se menciona o tiene que ver la palabra elegida
+					</p>			
+					
+				
+				</article>
+			</section>	
+						
+	</section>
+			
+
+	<footer class="footer">
+		
+		<p>
+			Mis apuntes de Git
+		</p>
+
+	</footer>
+
+	<span class="BotonDeVuelta">
+			<a href="Apuntes-git-github.html">Arriva perro</a>					
+	</span>
+
+</body>
+</html>

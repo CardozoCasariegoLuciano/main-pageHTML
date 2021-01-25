@@ -1,0 +1,38 @@
+#notas{
+	background-color: black;
+
+	width: 700px;
+	height: auto;
+	min-height: 200px;
+
+	position: absolute;
+	top: 180px;
+	left: 1000px;
+
+	opacity: .7;	
+	color: white;
+
+	border: 3px solid #610B38;
+	border-radius: 30px;
+	
+}
+
+#notas:hover{
+	opacity: 1;
+}
+
+
+#notas h1{
+	text-align: center;	
+}
+
+
+#notas ul{
+	position: relative;	
+	padding: 0px 0px 30px 30px;
+}
+
+
+#notas li{
+	font-size: 20px;	
+}

@@ -1,0 +1,66 @@
+#header
+{	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	position: absolute;
+	top: 40px;
+	left: 275px;
+}
+
+.MenuPrincipal ul, ol
+{
+	list-style: none;
+}
+
+.MenuPrincipal li a
+{
+	text-decoration: none;
+	background-color: #3B0B17;
+	color: #F2F2F2;
+	padding: 10px 100px;
+	display: block;
+	
+}
+
+.MenuPrincipal li a:hover
+{
+	background-color: #8A0829;
+}
+
+.MenuPrincipal > ul > li
+{
+	float: left;
+}
+
+.MenuPrincipal li ul
+{
+	display:none;
+	position: absolute;
+}
+
+.MenuPrincipal li:hover > ul
+{
+	display:block;
+	z-index: 100; /*Cuanto mas grande sea ese valor mas "adelante" va a estar */
+}
+
+.MenuPrincipal li ul li
+{
+	position: relative;
+}
+
+.MenuPrincipal li ul li ul
+{
+	right: -255px;
+	top: 0px;
+}
+
+
+
+.AccesoCampusUTN
+{
+	position: absolute;
+	top:-10px;
+	left: 1350px;
+}
+

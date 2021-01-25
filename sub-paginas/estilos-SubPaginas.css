@@ -1,0 +1,31 @@
+
+body{
+	background-color:#6A8676;
+	color:white;		
+}
+
+
+.botonPaginaInicio img{	
+	width: 60px;
+	height: 60px;
+	margin-right: 30px;
+}
+
+.header-sub-paginas{
+	display: flex;
+	align-items: center; 
+	margin-top: 20px;
+	margin-left: 25px;	
+}
+
+.BotonDeVuelta{
+	position:  fixed;
+	top: 850px;
+	left: 13px;
+	background-color: #9FF781;
+	padding: 5px;	
+	border-radius: 10px;
+}
+.BotonDeVuelta a{
+	text-decoration: none;
+}

@@ -1,0 +1,127 @@
+/* Variables */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+.contenedor .main {
+  min-height: calc(100vh - 180px - 17px);
+  padding: 30px 100px;
+  max-height: 2400px;
+}
+
+.contenedor .footer {
+  background-color: black;
+  height: 50px;
+  width: 80%;
+  margin: auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor .footer p {
+  font-size: 25px;
+}
+
+.comando {
+  font-size: 1.2rem;
+  color: #FFD700;
+}
+
+.ejemplo {
+  color: #b5abec;
+}
+
+.formatoBasico {
+  padding: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 8px;
+  vertical-align: top;
+  background-color: #21610B;
+}
+
+.formatoBasico:hover {
+  background-color: black;
+}
+
+.formatoMedio {
+  padding: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 8px;
+  vertical-align: top;
+  background-color: #2F584A;
+}
+
+.formatoMedio:hover {
+  background-color: black;
+}
+
+.formatoAlto {
+  padding: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 8px;
+  vertical-align: top;
+  background-color: #153329;
+}
+
+.formatoAlto:hover {
+  background-color: black;
+}
+
+.basesdedatos {
+  width: 500px;
+}
+
+.creartablas {
+  width: 500px;
+}
+
+.modificarTablas {
+  width: 500px;
+}
+
+.importar {
+  width: 500px;
+  position: relative;
+  top: -460px;
+}
+
+.consultas {
+  width: 500px;
+  position: relative;
+  top: -250px;
+  left: -550px;
+}
+
+.comodines {
+  width: 500px;
+  position: relative;
+  top: -330px;
+  left: -550px;
+}
+/*# sourceMappingURL=styles.css.map */

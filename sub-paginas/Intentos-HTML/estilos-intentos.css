@@ -1,0 +1,222 @@
+body{
+	display: flex;
+	flex-direction: column;	
+}
+
+.main{
+	min-height: calc(100vh - 80px - 234px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.contenedor_paginasInico, .contenedor_practicas, .contenedor_proyectos{
+
+	width: 80%;
+	min-height: 100px;
+	border: 3px solid #6d6875;
+	background-color: rgba( 100,150,32, 0.1);
+	margin-top: 20px;
+}
+
+.contenedor_items{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-content:unset;
+	
+}
+
+.contenedor_paginasInico{
+	margin-top: 80px;
+}
+
+.contenedor_paginasInico > h2{
+	margin-left: 20px;
+}
+
+.paginaInicio_item{
+
+	width: 350px;
+	height: 80px;
+	margin: 10px;
+	background: linear-gradient(90deg, rgba(255,255,255,0) 17%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.7) 100%);
+
+	border-radius: 8px;	
+	
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;		
+}
+
+.paginaInicio_titulo{
+	color: #c77dff;
+}
+
+.paginaInicio_item img{
+	width: 70px;	
+}
+
+.paginaInicio_botones{
+	display: flex;
+	flex-direction: column;
+}
+
+.paginaInicio_botones img{
+	width: 35px;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+.contenedor_practicas{
+
+}
+
+.contenedor_practicas > h2{
+	margin-left: 20px;
+}
+
+
+.practica_titulo{
+	color: #add7f6;
+	
+}
+
+
+.practicas_item{
+
+	width: 250px;
+	height: 350px;
+	margin: 10px;
+	background: rgba(0,0,0,0.4);
+	background-image: url(imagenes/fondo-practicas.png);	
+       
+
+	border: 1px black solid;
+	border-radius: 25px;	
+
+	display: inline-flex;
+	flex-direction: column;	
+	justify-content: space-between;
+	align-items: center;
+}
+
+.practica_texto{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.practica_descripcion{
+
+	max-width:80%;
+	font-size: 1.1em;
+	color: #fff3b0;
+
+}
+
+
+.practica_botones{
+
+	margin-bottom: 10px;
+	margin-left: 185px;	
+}
+
+.practica_botones img{
+
+	width: 40px;	
+}
+
+
+
+
+
+
+
+.contenedor_proyectos{
+
+}
+
+.proyectos_titulo{
+	color: gold;
+}
+
+.proyectos_item{
+	width: 350px;
+	height: 400px;
+	margin: 10px;
+	background: rgba(0,0,0,0.4);
+	background-image: url(imagenes/fondo-proyectos.png);	
+       
+
+	border: 1px black solid;
+	border-radius: 25px;	
+
+	display: inline-flex;
+	flex-direction: column;	
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contenedor_proyectos > h2{
+	margin-left: 20px;
+}
+
+.proyectos_texto{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.proyectos_descripcion{
+
+	max-width:80%;
+	font-size: 1.1em;
+	color: #fff3b0;
+
+}
+
+.proyectos_botones{
+
+	margin-bottom: 10px;
+	margin-left: 290px;	
+}
+
+.proyectos_botones img{
+
+	width: 40px;	
+}
+
+
+
+
+
+
+
+.footer{
+	margin-top: 150px;
+	background-color: black;
+	height: 80px;
+	width: 80%;
+	align-self: center;	
+	border: 2px solid white;
+	border-radius: 5px;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer p{
+
+	font-size: 50px;
+}
+
+
+

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes de Linux</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="../../estilos-SubPaginas.css">
+</head>
+
+<body>
+
+    <section class="contenedor">
+
+        <header class="header-sub-paginas">		
+            <div class="botonPaginaInicio">
+                <a href="../../../index.html">
+                    <img src="../../../imagenes/casita.png">
+                </a>
+            </div>	
+            <h1>Mis apuntes de Linux</h1>        
+        </header>  
+
+        <section class="main">
+
+            
+            <section class="comandossinCategoria formatoBasico">
+                <h2>Comandos sin categora</h2>
+                <p><span class="comando">pwd </span> (print working directory) Nos imprime la ubicación en la que estemos</p>
+                <p> <span class="comando">history</span> lista todos los comandos usados</p>
+                <p> <span class="comando">wc [unArchivoDeTexto]</unArchivoDeTexto></span> Nos muestra 3 numeros: 1ro) cantidad de lineas  2do) cantidad de palabras  3ro) la cantidad de Bytes que tiene ese erchivo de texto</p>
+                <p><span class="comando">sudo su</span> Nos permite ingresar como super usuario (nos va a pedir nuestra contraseña)</p>
+                <p><span class="comando">exit</span> Cierra la terminal o nos saca del modo "super usuario" si estamos en el</p>
+                <p><span class="comando">clear</span> Limpia la terminal</p>
+                <p><span class="comando">echo "texto"</span> imprime ese texto en pantalla, puedo copiarlo dentro de un atchivo con los "|" (Ver mas abajo)</p>
+            </section>
+
+
+            <section class="comandoDeAyuda formatoBasico">
+                <h2>Comandos de ayuda</h2>
+                <p>
+                    <span class="comando">man [unComando]</span> Nos muestra el manual de ese comando <br> <br>
+                        <span class="ejemplo"> EJEMPLOS: man ls  ||  man cd  || man pwd</span>
+                        
+                </p>
+                <p>
+                    <span class="comando">[unComando] --help</span> Nos muestra la ayuda de ese comando <br> <br>
+                    <span class="ejemplo">EJEMPLOS:  ls --help  ||  cd --help || pwd --help</span>    
+                </p>
+            </section>      
+
+
+            <section class="ls formatoBasico">
+                <h2>Listar contenido</h2>                
+                <p><span class="comando">ls</span> lista todos los elementos que estén en nuestra ubicación</p>
+                <p><span class="comando">ls -l</span> nos brinda mas información sobre los archivos</p>
+                <p><span class="comando">ls -lh</span> expresa el tamaño de los archivos de forma mas clara</p>
+                <p><span class="comando">ls -a</span> nos muestra los archivos ocultos</p>
+                <p><span class="comando">ls -R</span> nos muestra recursivamente todos los archivos (el contenido dentro de las carpetas)</p>
+            </section>
+
+
+            <section class="cd formatoBasico">
+                <h2>Cambiar de carpeta</h2>
+                <p><span class="comando">cd</span> (change directory) nos cambia la ubicación por el home</p>
+                <p><span class="comando">cd [UnaCarpeta]</UnaCarpeta></span> entramos a esa carpeta</p>
+                <p><span class="comando">cd ..</span> nos manda un directorio atrás</p>
+                <p><span class="comando">cd [UnaRuta]</UnaCarpeta></span> entramos a la ultima carpeta de esa ruta, cada subcarpeta separada por /</p>
+            </section>
+
+            
+            <section class="crear formatoBasico">
+                <h2>Crear archivos o carpetas</h2>
+                <p><span class="comando">mkdir [unNombre]</span> (make directory) nos crea una carpeta en el directorio en el que estemos con el nombre que elijamos</p>
+                <p><span class="comando">touch [unNombre]</span> crea un archivo vació</p>
+                <p><span class="comando">nano [unNombre]</span> si no existe un archivo de texto para leer con el nombre elejido, lo crea. Si existe lo abre con un lector interno  de la terminal (nano), con [Ctrl + g] guardas los cambios y con [Ctrl + x] salis del editor </p>
+                <p><span class="comando"></span></p>
+            </section>
+
+
+            <section class="cp formatoBasico">
+                <h2>Copiar archivos o carpetas</h2>
+                <p><span class="comando">cp [elArchivo] [unaRutaAbsoluta]</span> (copi) nos COPIA elArchivo y lo pega en unaRutaAbsoluta (arranca desde la raiz /)</unaRutaAbsoluta></p>
+                <p><span class="comando">cp -i [elArchivo] [unaRutaAbsoluta]</span> si ya existe un archivo con ese nombre, nos pregunta si lo queremos sobre-escribir</p>
+                <p><span class="comando">cp  -r [unaCarpeta] [unaRutaAbsoluta]</span> nos COPIA unaCarpeta y la pega en unaRutaAbsoluta</unaRutaAbsoluta></p>
+            </section>
+
+
+            <section class="mv formatoBasico">
+                <h2>Mover o renombrar archivos y carpetas</h2>
+                <p><span class="comando">mv [elElemento] [unaRutaAbsoluta]</span> (move) nos CORTA elElemento y lo pega en unaRutaAbsoluta</p>
+                <p><span class="comando">mv -i [elElemento] [unaRutaAbsoluta]</span> si ya existe el archivo/carpeta con ese nombre, nos pregunta si lo queremos sobre-escribir</p>
+                <p><span class="comando">mv [elElemento] [elElementoRenombrado]</span> mv tambien sirve para renombrar archivos o carpetas, siempre y cuando el nuevo nombre no exista en la carpeta contenedora</p>
+            </section>
+
+
+            <section class="rm formatoBasico">
+                <h2>Eliminar archivos o carpetas</h2>
+                <p><span class="comando">rm [unArchivo]</span> (remove) elimina elArchivo </p>
+                <p><span class="comando">rm -R [unaCarpeta]</span> Borra la carpetas, y todo lo que tengan dentro</p>
+            </section>
+
+
+            <section class="cat formatoBasico">
+                <h2>Ver contenido de un archivo</h2>
+                <p><span class="comando">cat [unArchivo]</span> me imprime en la terminal el contenido de ese archivo</p>
+                <p><span class="comando">cat -n [unArchivo]</span> Indica el numero de cada linea</p>
+                <p><span class="comando">cat -s [unArchivo]</span> Elimina (solo en la vista de la terminal) los saltos de linea repetidos</p>
+            </section>
+
+
+            <section class="permisosOctal formatoMedio">
+                <h2>Dar permisos en forma octal</h2>
+
+                <p><span class="comando">sudo chmod [Codigo] [unElemento]</span> Le da a [unElemento] (Archivo o carpeta) los permisos que le indique en [Codigo]</p>
+
+                <p>
+                    Con la forma Octal el [Codigo] indica el tipo de permisos. Los mas comunes son: <br><br>
+										
+                        777: Todos tienen permiso para hacer todo<br>
+                        000: Nadie tiene permiso para hacer nada<br>
+                        700: Solo el Usuario tiene todos los permisos<br>
+                        755: El Usuario tiene todos los permisos mientras que el grupo y otros solo pueden ver y ejecutal (pero no escribir)<br>
+                        744:	El Usuario tiene todos los permisos mientras que el grupo y otros solo pueden ver (pero no escribir ni ejecutar)<br><br>
+                        
+                    En total son 24 combinaciones, googlear si quiero mas <br><br>
+                    
+                    <span class="ejemplo"> EJEMPLO)  sudo chmod 777 Tarea.txt</span>
+
+                    <p><span class="comando">sudo chmod [Codigo] [unElemento] -R</span> Para cuando modifico los permisos de una carpeta, esos permisos tambien lo tienen todo lo que este dentro </p>
+                   
+                </p>
+                </section>
+
+
+            <section class="permisosCaracter formatoMedio">
+                <h2>Dar permisos por caracter</h2>
+
+                <p><span class="comando">sudo chmod [unUsuario] [unaAccion] [unPermiso] [unElemento]</span> Le da (o quita) a lo usuarios elegidos las permisos seleccionados para el elemendo </p>
+
+                <p> 
+                    [unUsuario] Pueden ser u(user) g(group) o(other) a(all) <br>
+                    [unaAccion] Pueden ser +(Agregar) -(Quitar) =(igual a) <br>
+                    [unPermiso] Pueden ser r(read) w(write) x(execute) <br>
+                    [unElemento] Archivo o carpeta <br><br>
+                    <span class="ejemplo"> EJEMPLO)  sudo chmod u=rwx,g=,o+w tarea.txr</span>  sin espacios entre los distintos usuarios y separados con ,(comas) <br><br> 
+                         a user le estoy dando todos los permisos <br>
+                        a group le estoy sacando todos los permisos <br>
+                        y a others le estoy agregando el permiso de estritura <br><br>
+                    <span class="ejemplo"> EJEMPLO)  sudo chmod u+r tarea.txr</span> <br><br>
+                        
+                        a user le estoy agregando el permiso de lectura <br>
+                        
+                    <p><span class="comando">sudo chmod [unUsuario] [unaAccion] [unPermiso] [unElemento] -R</span> Para cuando modifico los permisos de una carpeta, esos permisos tambien lo tienen todo lo que este dentro </p>
+                   
+                </p>
+                </section>
+
+
+             <section class="accesoDirecto formatoMedio">
+                 <h2>Crear accesos directos</h2>
+                 <p>
+                     <span class="comando">ln -s [rutaAbsolutaOrigen] [rutaAbsolutaDestino]</span>  <br><br>
+                     
+                     [rutaAbsolutaOrigen] ruta absoluta del elemento que quiero que tenga el acceso directo <br>
+		
+                     [rutaAbsolutaDestino] ruta absoluta en la que quiero que este el acceso directo <br>
+                 </p>
+             </section>
+
+
+            <section class="nano formatoMedio">
+                <h2>Editar un archivo desde la terminal</h2>
+                <p>
+                    <span class="comando">nano [unArchivo]</span>
+                    esto nos manda a otra interfaz de la terminal en la que nos podemos mover con mas libertad, en la parte inferior nos da unas opciones especiales, las cuales podemos 
+					usar tocando la tecla Ctrl + La letra que queramos, Ej) Ctrl + X para salir de esa interfaz
+                </p>
+                <p>
+                    Si [unArchivo] no existe primero lo crea y despues nos permite editarlo
+                </p>
+            </section>
+
+
+             <section class="tar formatoAlto">
+                 <h2>Comprimir un archivo con .tar</h2>
+                 <p>
+                     <span class="comando">tar cvf [nombreDel.tar] [archivosY/OCarpetasAComprimir]</span> <br><br
+                     c: Indica que vas a crear un nuevo archivo <br>
+	                 v: Indica que va a mosrar el proceso <br>
+	                 f: Indica que voy a pasar un archivo .tar <br><br>
+	                 [nombreDel.tar]: Es el nombre que va a terner el Comprimido, pero tiene que terminar en .tar <br>
+	                 [archivosY/OCarpetasAComprimir]: si voy a comprimir mas de una cosa los pongo separado <br>
+                 </p
+                 <h2>Ver el contenido de un .tar</h2>
+                 <p>
+                     <span class="comando">tar tvf [nombreDel.tar]</span> <br><br
+                     t: Indica que queres ver el contenido <br>
+	                 v: Indica que va a mosrar el proceso <br>
+	                 f: Indica que voy a pasar un archivo .tar <br><br>
+	                 [nombreDel.tar]: Es el nombre del archivo .tar  
+                 </p
+                 <h2>Descomprimir un archivo con .tar</h2>
+                 <p>
+                     <span class="comando">tar xvf [nombreDel.tar]</span> <br><br
+                     x: Indica que vas a descomprimir <br>
+	                 v: Indica que va a mosrar el proceso <br>
+	                 f: Indica que voy a pasar un archivo .tar <br><br>
+	                 [nombreDel.tar]: Es el nombre del archivo .tar  
+                 </p>                        
+             </section>
+
+
+             <section class="instalarArchivos formatoAlto">
+                 <h2>Instalacion de archivos .run</h2>
+                 <p><span class="comando">./[ElArchivo.run]</span> Para instalarlo. Tiene que tener permisos de ejecusion (chmod)</p>
+
+                 <h2>Instalacion de archivos .tar.gz</h2>
+                 <p>
+                    1ro) hay que descomprimirlo <span class="comando">tar xvf [nombreDel.tar.gz]</span> ó <span class="comando">tar jxvf [nom.tar.bz2]</span>si termina en bz2 <br>
+                    2do) Entrar en la carpeta recien descomprimida <br>
+                    3ro) Ejecutar  el archivo "Configure" (Tiene que tener los permisos) con <span class="comando">./ElArchivo</span> <br>
+                    4to) <span class="comando">make</span> para que prepare la instalacion <br>
+                    5to) <span class="comando">sudo make install</span> <br>
+                 </p>
+             </section>
+
+
+             <section class="procesos formatoMedio">
+                 <h2>Procesos</h2>
+                 <p><span class="comando">top</span> Nos muestra los recursos usados por el sistema (junto a su PID correspondiente)</p>
+                 <p><span class="comando">kill [unPID]</span> Para matar ese proceso</p>
+             </section>
+
+
+             <section class="concatenar formatoAlto">
+                 <h2>Concatenar comandos</h2>
+                 <p>Cuando quiero que un comando modifique o trabaje sobre el resultado de otro uso la barra vertical "|". puedo concatenar tantos pipes (las barras) como querramos</p>
+
+                 <p><span class="ejemplo">EJEMPLO: ls | sort </span> Primero lista todos los elementos, y despues lo ordena alfabeticamente</p>
+                 <p><span class="ejemplo">EJEMPLO: cat [unArchivo] | grep [unaPalabra] </span> Muestra el contenido de un archivo de texto, y sobre eso muestra solo las lineas/palabras que contengan [unaPalabra]</p>
+                 
+                 <h2>Comandos utiles para esto</h2>
+                 <p><span class="comando">sort</span> Ordena alfabeticamente/numeralmente</p>
+                 <p><span class="comando">grep [unaPalabra]</span> Muestra las lineas que contengan esa palabra (o letra)</p>
+                 <p><span class="comando">grep -i [unaPalabra]</span> Ignora las mayusculas y minusculas</p>
+             </section>
+
+
+             <section class="scripting formatoAlto">
+                 <h2>Shell Scripting Básico</h2>
+                 <p>
+                    Basicamente es crear un archivo que contenga una serie de comandos, estos comandos no van a hacer nada hasta que ejecute el archivo. <br><br>
+	
+                    Pasos: <br><br>
+                    
+                    1ro) crear un archivo de texto plano con la extencion .sh <br>
+                    2do) En la primera fila copiar: [#!/bin/bash] eso indica que usaremos bash, que es un interprete de comandos muy comun en linux <br>
+                    3ro) copiar los comandos que quiera (mkdir,touch,echo,sudo,cd,etc), todos separados por punto y coma ";" <br>
+                    4to) Darle permisos de ejecucion <br>
+                    5to) ejecutarlo cuando lo necesite (./elArchivo.sh) <br>
+                 </p>
+             </section>
+
+
+             <section class="sistema formatoMedio">
+                 <h2>Comandos del sistema</h2>
+                 <p><span class="comando">shutdown</span> o <span class="comando">init 0</span> Apagar la PC</p>
+                 <p><span class="comando">reboot</span> Reiniciar la PC</p>
+                 <p><span class="comando">df -h</span> Ver particiones del disco duro</p>
+                 <p><span class="comando">free -h</span> Ver la memoria RAM disponible</p>
+                 <p><span class="comando">lshw</span> Ver informacion del Hardware</p>
+                 <p><span class="comando">lscpu</span> Muestra info del prosesador</p>
+                 <p><span class="comando">uptime </span> Muestra la hora actual, tiempo de encendido del equipo y  otras cosas mas</p>
+                 <p><span class="comando">inxi -Fxz</span> Ver informacion del Hardware de una forma mas amena</p>
+
+
+             </section>
+
+
+
+        </section>
+
+        <span class="BotonDeVuelta">
+            <a href="index.html">Subir</a>					
+        </span>
+
+
+        <footer class="footer">
+            <p>Apuntes de Linux</p>
+        </footer>
+
+
+    </section>
+
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+.AccesosRapidos img{
+	width: 120px;
+	height: 120px;
+}
+
+
+/* Paginas utiles */
+
+#paginasUtiles{
+
+	position: absolute;
+	top:150px;
+	left: 100px;
+	padding: 25px;
+	color: black;
+
+}
+
+
+#paginasUtiles figcaption{	
+	font-size: 15px;
+}
+
+#paginasUtiles figure{
+	width: 120px;
+}
+
+
+
+/* Grepolis  */
+
+#Grepolis{
+	padding: 25px;
+	color: black;
+	position: absolute;
+	top:150px;
+	left: 300px;
+}
+
+
+#Grepolis figcaption{	
+	font-size: 15px;
+}
+
+#Grepolis figure{
+	width: 120px;
+}
+
+
+/* Cominucacion  */
+
+#Comunicacion{
+	padding: 25px;
+	color: black;
+	position: absolute;
+	top:150px;
+	left: 500px;
+}
+
+
+#Comunicacion figcaption{	
+	font-size: 15px;
+}
+
+#Comunicacion figure{
+	width: 120px;
+}
+
+/* Otros  */
+
+#Cursos{
+	padding: 25px;
+	color: black;
+	position: absolute;
+	top:150px;
+	left: 700px;
+}
+
+
+#Cursos figcaption{	
+	font-size: 15px;
+}
+
+#Cursos figure{
+	width: 120px;
+}

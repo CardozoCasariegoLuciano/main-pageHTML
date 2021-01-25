@@ -1,0 +1,190 @@
+.main-html{	
+	
+}
+
+.formatoContenidoHTML{
+	background-color: #21610B;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 3px;
+}
+
+.primerColumna{
+
+	width: 650px;
+}
+
+.segundaColumna{
+
+	width: 450px;
+}
+
+.tercerColumna{
+
+	width: 400px;
+}
+
+
+
+.ejemplosHTML{
+	color:cornflowerblue;
+}
+
+.titulo{
+	color: burlywood;
+	font-size: 16px;
+}
+
+.etiquetas{
+	color:lightpink;
+}
+
+.atributo{
+	color: lime;
+}
+
+.valor{
+	 color: rgb(141, 212, 214);
+}
+
+
+
+.Introduccion-html{   
+
+	height: 580px;
+
+	position: absolute;
+	top: 100px;
+	bottom: 0px;
+	left: 110px;
+	right: 0px;
+}
+
+.codCaracteres{  
+	height: 340px;	
+
+	position: absolute;
+	top: 100px;
+	bottom: 0px;
+	left: 805px;
+	right: 0px;
+}
+
+.EtiquetasHead{ 
+	
+	height: 330px;
+
+	position: absolute;
+	top: 100px;
+	bottom: 0px;
+	left: 1300px;
+	right: 0px;
+}
+
+
+.etiquetasTablas{  
+	height: 450px;
+	
+	position: absolute;
+	top: 470px;
+	bottom: 0px;
+	left: 1300px;
+	right: 0px;
+}
+
+
+.selectores{  
+	height: 155px;
+
+	position: absolute;
+	top: 960px;;
+	bottom: 0px;
+	left: 1300px;
+	right: 0px;
+}
+
+
+.etiquetasTextos{ 
+
+	height: 300px;
+
+	position: absolute;
+	top: 480px;
+	bottom: 0px;
+	left: 805px;
+	right: 0px;
+}
+
+.etiquetasIncrustar{  
+	height: 280px;
+	
+	position: absolute;
+	top: 725px;
+	bottom: 0px;
+	left: 110px;
+	right: 0px;
+}
+
+.etiquetasContenedores{  
+	height: 400px;
+
+	position: absolute;
+	top: 1050px;
+	bottom: 0px;
+	left: 110px;
+	right: 0px;
+}
+
+.etiquetasListas{  
+	height: 315px;	
+
+	position: absolute;
+	top: 825px;
+	bottom: 0px;
+	left: 805px;
+	right: 0px;
+}
+
+
+
+.etiquetasFormularios{ 
+	
+	height: 840px;
+
+	position: absolute;
+	top: 1495px;
+	bottom: 0px;
+	left: 110px;
+	right: 0px;
+}
+
+
+
+.CSSenHTML{  
+
+	height: 370px;
+
+	position: absolute;
+	top: 1180px;
+	bottom: 0px;
+	left: 805px;
+	right: 0px;
+}
+
+
+
+
+
+.footer{
+	background: black;
+	color: white;	
+	position: absolute;
+	top: 2400px;
+	left: 220px;
+	width: 80%;
+	}
+
+.footer p{
+	text-align: center;
+	font-size: 25px;
+}

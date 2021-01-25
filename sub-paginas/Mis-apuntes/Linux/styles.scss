@@ -1,0 +1,283 @@
+/* Variables */
+
+$colorComandos: #FFD700;
+$colorEjemplo: #b5abec;
+
+
+
+$largo1: 500px;
+$largo2: 450px;
+
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+
+    .main{
+
+        min-height: calc(100vh - 180px - 17px);
+        padding: 30px 100px;
+        max-height: 2400px;
+    }
+
+    .footer{
+        background-color: black;
+        height: 50px;
+        width: 80%;
+        margin: auto;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;                 
+
+        p{
+            font-size: 25px;              
+        }
+    }
+}
+
+
+
+.comando{
+    font-size: 1.2rem;
+    color: $colorComandos;
+}
+
+.ejemplo{
+    color: $colorEjemplo;
+}
+
+
+@mixin formatoGeneral() {
+
+    padding: 15px;
+    display: inline-block;
+    border-radius: 10px;    
+    margin: 8px;
+    vertical-align: top;    
+}
+
+.formatoBasico{
+
+    @include formatoGeneral();
+    background-color: #21610B;
+
+    &:hover{
+        background-color: black;
+    }
+}
+
+
+.formatoMedio{
+
+    @include formatoGeneral();
+    background-color: #2F584A;    
+
+    &:hover{
+        background-color: black;
+    }
+}
+
+
+.formatoAlto{
+
+    @include formatoGeneral();
+    background-color: #153329;    
+
+    &:hover{
+        background-color: black;
+    }
+}
+
+
+
+
+
+.comandoDeAyuda{
+    width: $largo2;
+}
+
+.comandossinCategoria{
+    width: $largo1;
+}
+
+.ls{
+    width: $largo2;
+}
+
+.cd{
+    width:  $largo2;
+
+    position: relative;
+    top: -190px;
+    bottom: 000px;
+    left: 550px;
+    right: 0px;
+}
+
+.crear{
+
+    width: $largo2;
+
+    position: relative;
+    top: 285px;
+    bottom: 000px;
+    left: 50px;
+    right: 0px;
+}
+
+
+.cp{
+    width: $largo2;
+
+    position: relative;
+    top: -125px;
+    bottom: 0px;
+    left: 50px;
+    right: 0px;
+}
+
+
+.mv{
+    width: $largo1;
+
+    position: relative;
+    top: -295px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+
+.rm{
+    width: $largo2;
+
+    position: relative;
+    top: -205px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.cat{
+    width: $largo2;
+
+    position: relative;
+    top: -140px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+
+
+.permisosOctal{
+
+    width: $largo1;
+
+    position: relative;
+    top: -293px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.permisosCaracter{
+
+    width: $largo2;
+
+    position: relative;
+    top: -5px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.accesoDirecto{
+
+    width: $largo2;
+
+    position: relative;
+    top: -165px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.nano{
+
+    width: $largo2;
+
+    position: relative;
+    top: -470px;
+    bottom: 0px;
+    left: 1050px;
+    right: 0px;
+}   
+
+.tar{
+
+    width: $largo1;
+
+    position: relative;
+    top: -325px;
+    bottom: 0px;
+    left: -500px;    
+}
+
+.instalarArchivos{
+
+    width: $largo2;
+
+    position: relative;
+    top: -200px;
+    bottom: 0px;
+    left: 00px;    
+}
+
+.procesos{
+
+    width: $largo2;
+
+    position: relative;
+    top: -615px;
+    bottom: 0px;
+    left: 550px; 
+}
+
+.concatenar{
+
+    width: $largo1;
+
+    position: relative;
+    top: -315px;
+    bottom: 0px;
+    left: -500px; 
+}
+
+.scripting{
+    width: $largo2;
+
+    position: relative;
+    top: -400px;
+    bottom: 0px;
+    left: -500px; 
+}
+
+.sistema{
+
+    width: $largo2;
+
+    position: relative;
+    top: -900px;
+    bottom: 0px;
+    left: 1050px; 
+}
